@@ -48,6 +48,6 @@ app.use(function(request, response){
 
 var server_port = process.env.PORT || 80;
 var server_host = '0.0.0.0';
-server.listen(server_port, server_host, function() {
+http.createServer(app).listen(server_port, server_host, function() {
     console.log('Работаем на %d', server_port);
 });
